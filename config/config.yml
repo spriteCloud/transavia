@@ -1,0 +1,30 @@
+################################################################################
+# Config file for the test automation
+# When a config_local.yml exists, that will then be loaded instead of this default config file
+
+################################################################################
+# Set the global variables
+default_env: production              # defines the environment
+default_device: desktop1080           # See devices.yml for your options
+close_browser_after: end             # Can be `scenario`, `feature` or `end`
+
+################################################################################
+# Environment specific variables
+test:
+  pages:
+    root: https://test.transavia.com
+    home: /
+
+
+uat:
+  pages:
+    root: https://uat.transavia.com
+    home: /
+
+
+production:
+  pages:
+    root: https://www.transavia.com
+    home: /
+    nl: /en-NL/home/
+    fr: /fr-FR/accueil/
